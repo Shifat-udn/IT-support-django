@@ -1,0 +1,34 @@
+<div class="table-responsive">
+    <h4>Laptop Support Requests : </h4>
+        <table class="table table-striped table-sm">
+                        
+          <thead>
+            <tr>
+              
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">SAP ID</th>
+              <th scope="col">Brand</th>
+              <th scope="col">OS</th>
+              <th scope="col">Urgency</th>
+            </tr>
+          </thead>
+            <tbody>
+              {% for x in service %}
+                <tr>
+                <td><span data-feather="chevron-right"></span></td>
+                <td><a href="service-request/details/{{ x.id }}">{{ x.name }}</a></td>
+                <td>{{ x.sap_id }}</td>
+                <td>{{ x.laptop_brand }}</td>
+                <td>{{ x.laptop_os }}</td>
+                <td>{{ x.urgency }}</td>
+                </tr>
+             {% endfor %}
+            
+            
+            </tbody> 
+            
+            
+           
+        </table>
+      </div>

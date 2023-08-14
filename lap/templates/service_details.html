@@ -1,0 +1,85 @@
+
+{% extends "base.html" %}
+{% block title %}{{ service.name }}{% endblock %}
+
+{% block content %}
+
+
+<div class="container emp-profile">
+            
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h3>
+                                        {{ service.name }}
+                                    </h3>
+                                    <h6>
+                                     <span data-feather="user"></span>  SAP ID :  {{ service.sap_id }}
+                                    </h6>
+                                    <p> <span data-feather="phone"></span> Contact : <span>{{ service.phone }}</span></p>
+                                    <p><span data-feather="file-minus"></span> Reported On : <span>{{ service.report_date }}</span></p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Support Details</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Brand</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ service.laptop_brand }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>OS</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ service.laptop_os }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Urgency</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ service.urgency }}</p>
+                                            </div>
+                                        </div>
+                                        
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                    
+        </div>
+ <div class="row">
+     <div class="col-md-6 border-top p-3">
+         
+         <p>Issue : <span class="font-weight-bold"> {{ service.issue }} </span> </p>
+     </div>
+</div>
+
+<p>Back to <a href="/">Laptop</a></p>
+
+{% endblock %}
+
+
+
+
+
+
+

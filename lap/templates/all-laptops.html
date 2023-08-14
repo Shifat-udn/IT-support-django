@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% include 'component/dashboard.html' %}
+{% include 'component/table.html' with laptops=laptops %}
+{% include 'component/support_table.html' with service=service %}
+
+{% endblock %}
